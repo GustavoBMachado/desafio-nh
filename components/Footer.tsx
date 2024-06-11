@@ -6,8 +6,7 @@ const Footer: React.FC = () => {
     <footer className="bg-black text-white p-10">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center">
-          <Image src="/logo.png" alt="Spotify Logo" width={50} height={50} />
-          <div className="text-2xl font-bold ml-2">Spotify</div>
+          <Image src="/logo.png" alt="Spotify Logo" width={150} height={150} />
         </div>
         <div className="flex flex-col md:flex-row mt-6 md:mt-0 space-y-4 md:space-y-0 md:space-x-10">
           <div className="text-center md:text-left">
@@ -38,4 +37,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export { Footer };
