@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from './Header';
+import { HeaderHero } from './HeaderHero';
 import { Footer } from './Footer';
 
 interface LayoutProps {
@@ -9,7 +9,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <HeaderHero />
       <main className="flex-grow">{children}</main>
       <Footer />
     </div>

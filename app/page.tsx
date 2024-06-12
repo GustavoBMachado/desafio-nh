@@ -1,18 +1,17 @@
 import Head from 'next/head';
 import { Layout } from '../components/Layout';
-import { Hero } from '../components/Hero';
+import { HeaderHero } from '../components/HeaderHero';
 import { MainContent } from '../components/MainContent';
 import { SecondarySection } from '../components/SecondarySection';
-import Image from 'next/image'
 
 const Home: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>desafionh</title>
-        <link rel="icon" href="/favicon.png" />
+        <title>Spotify Demo</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero />
+      <HeaderHero />
       <MainContent />
       <SecondarySection />
     </Layout>
