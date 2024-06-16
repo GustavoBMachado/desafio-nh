@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import { Layout } from '../components/Layout';
+import { Header } from '@/components/Header';
 import { Hero } from '../components/Hero';
 import { MainContent } from '../components/MainContent';
 import { SecondarySection } from '../components/SecondarySection';
+import { Footer } from '@/components/Footer';
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +13,8 @@ const Home: React.FC = () => {
         <title>Spotify Demo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Footer/>
+      <Header/>
       <Hero />
       <MainContent />
       <SecondarySection />
