@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos necessários para o carrossel */
+
 @import "~swiper/swiper-bundle.css";
 @import "~swiper/css/navigation";
 @import "~swiper/css/pagination";
 
-/* Adicione aqui quaisquer estilos globais personalizados */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -52,10 +52,11 @@ body {
 .hero-section {
   position: relative;
   text-align: center;
-  padding: 20px;
   background: linear-gradient(to right, rgb(255, 163, 247), rgb(140, 0, 255));
   height: 60vh;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-background {
@@ -72,13 +73,25 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, pink, purple);
-  opacity: 0.05;
+  background: linear-gradient(to right, purple, pink);
+  opacity: 0.2;
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-slide-content {
+  padding-top: 50px;
 }
 
 .hero-title {
@@ -121,14 +134,14 @@ body {
   background: linear-gradient(to right, rgb(255, 163, 247), rgb(140, 0, 255));
   text-align: left;
   color: #ffffff;
-  height: 80vh; /* Adicione esta linha para aumentar a altura */
+  height: 80vh;
 }
 
 .secondary-background {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute; /* Ajuste para garantir que a imagem ocupe toda a seção */
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -165,13 +178,13 @@ body {
   color: #ffffff;
 }
 .secondary-content p {
-  font-size: 1.2rem; /* Tamanho do texto */
-  color: white; /* Cor do texto */
-  margin-bottom: 10px; /* Espaçamento entre parágrafos */
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .secondary-content p strong {
-  color: #7aebff; /* Cor do texto em negrito */
+  color: #7aebff;
 }
 
 .secondary-images {
@@ -196,7 +209,7 @@ body {
   right: 12%;
 }
 
-/* Estilos personalizados para os botões de navegação do Swiper */
+
 .swiper-button-next,
 .swiper-button-prev {
   color: rgb(255, 255, 255) !important;
@@ -207,7 +220,7 @@ body {
   font-size: 40px;
 }
 
-/* Estilos para MainContent */
+
 .main-content-section {
   padding: 2.5rem;
   background-color: #fff;
@@ -215,13 +228,13 @@ body {
 }
 
 .main-content-section h2 {
-  color: #6b21a8; /* Purple-600 */
+  color: #6b21a8;
 }
 
 .main-content-section .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem; /* Ajuste o valor para controlar o espaçamento entre colunas e fileiras */
+  gap: 0.5rem;
   margin-top: 1.5rem;
 }
 
@@ -247,5 +260,5 @@ body {
 }
 
 .main-content-section .text-section h3 {
-  color: #6b21a8; /* Purple-600 */
+  color: #6b21a8;
 }
