@@ -2,34 +2,250 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'react-responsive-carousel/lib/styles/carousel.min.css';
+/* Estilos necessários para o carrossel */
+@import "~swiper/swiper-bundle.css";
+@import "~swiper/css/navigation";
+@import "~swiper/css/pagination";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Adicione aqui quaisquer estilos globais personalizados */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.footer {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.header-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, rgb(255, 163, 247), rgb(140, 0, 255));
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, pink, purple);
+  opacity: 0.05;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hero-button {
+  background-color: rgb(222, 58, 251);
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  margin: 0 10px;
+  color: white;
+}
+
+.hero-button-bordered {
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  margin: 0 10px;
+  color: white;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.secondary-section {
+  position: relative;
+  padding: 40px;
+  background: linear-gradient(to right, rgb(255, 163, 247), rgb(140, 0, 255));
+  text-align: left;
+  color: #ffffff;
+  height: 80vh; /* Adicione esta linha para aumentar a altura */
+}
+
+.secondary-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute; /* Ajuste para garantir que a imagem ocupe toda a seção */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.secondary-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, purple, pink);
+  opacity: 0.05;
+}
+
+.secondary-title {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.secondary-content {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  font-weight: bold;
+  max-width: 280px;
+  margin: 0 auto;
+  line-height: 1.4;
+  z-index: 1;
+  transform: translate(0,0);
+  color: #ffffff;
+}
+.secondary-content p {
+  font-size: 1.2rem; /* Tamanho do texto */
+  color: white; /* Cor do texto */
+  margin-bottom: 10px; /* Espaçamento entre parágrafos */
+}
+
+.secondary-content p strong {
+  color: #7aebff; /* Cor do texto em negrito */
+}
+
+.secondary-images {
+  position: cover;
+  margin-top: 20px;
+}
+
+.secondary-image {
+  position: absolute;
+  width: 250px;
+  height: 500px;
+}
+
+.secondary-image.image1 {
+  top: 0px;
+  right: 30%;
+  bottom: 0px;
+}
+
+.secondary-image.image2 {
+  top: 100px;
+  right: 12%;
+}
+
+/* Estilos personalizados para os botões de navegação do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(255, 255, 255) !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 40px;
+}
+
+/* Estilos para MainContent */
+.main-content-section {
+  padding: 2.5rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.main-content-section h2 {
+  color: #6b21a8; /* Purple-600 */
+}
+
+.main-content-section .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem; /* Ajuste o valor para controlar o espaçamento entre colunas e fileiras */
+  margin-top: 1.5rem;
+}
+
+.main-content-section .gallery div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content-section .gallery img {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.main-content-section .gallery img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.main-content-section .text-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.main-content-section .text-section h3 {
+  color: #6b21a8; /* Purple-600 */
 }

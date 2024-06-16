@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Layout } from '../components/Layout';
-import { HeaderHero } from '../components/HeaderHero';
+import { Hero } from '../components/Hero';
 import { MainContent } from '../components/MainContent';
 import { SecondarySection } from '../components/SecondarySection';
 
@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <title>Spotify Demo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeaderHero />
+      <Hero />
       <MainContent />
       <SecondarySection />
     </Layout>

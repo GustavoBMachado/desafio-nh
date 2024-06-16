@@ -3,21 +3,18 @@ import Image from 'next/image';
 
 const SecondarySection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-left p-20">
-      <h2 className="text-4xl font-bold">Fácil</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        <div>
-          <h3 className="text-2xl font-bold">Buscar</h3>
-          <p className="mt-2">Já sabe o que quer escutar? É só procurar e apertar o play.</p>
-          <h3 className="text-2xl font-bold mt-6">Navegar</h3>
-          <p className="mt-2">Veja os novos lançamentos, o que está bombando nas paradas e as melhores playlists para seu momento.</p>
-          <h3 className="text-2xl font-bold mt-6">Descobrir</h3>
-          <p className="mt-2">Curta músicas novas toda semana feita com uma playlist personalizada pra você. Ou relaxe e curta uma das rádios.</p>
-        </div>
-        <div className="flex justify-corner">
-          <Image src="/iphone1.png" alt="Spotify on phones" width={400} height={400} />
-          <Image src="/iphone2.png" alt="Spotify on phones" width={400} height={400} />
-        </div>
+    <section className="secondary-section">
+      <div className="secondary-background" style={{ backgroundImage: "url('/capa.png')" }}></div>
+      <div className="secondary-overlay"></div>
+      <h2 className="secondary-title">Fácil</h2>
+      <div className="secondary-content">
+        <p><strong>Buscar</strong><br />Já sabe o que quer escutar? É só procurar e apertar o play.</p>
+        <p><strong>Navegar</strong><br />Veja os novos lançamentos, o que está bombando nas paradas e as melhores playlists para o seu momento.</p>
+        <p><strong>Descobrir</strong><br />Curta músicas novas toda segunda-feira com uma playlist personalizada pra você. Ou relaxe e curta uma das rádios.</p>
+      </div>
+      <div className="secondary-images">
+        <img src="/iphone1.png" alt="Imagem 1" className="secondary-image image1 transform rotate-12" />
+        <img src="/iphone2.png" alt="Imagem 2" className="secondary-image image2 transform rotate-12" />
       </div>
     </section>
   );

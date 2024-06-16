@@ -1,23 +1,42 @@
+'use client'
 import React from 'react';
-import Image from 'next/image';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center p-20"
-      style={{
-        backgroundImage: "url('/capa.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-85"></div>
-      <div className="relative z-10">
-        <h1 className="text-5xl font-bold">Música para todos</h1>
-        <div className="mt-4 space-x-4">
-          <button className="bg-purple-500 px-6 py-2 rounded-full text-lg">Aproveite o Spotify Free</button>
-          <button className="border-2 border-white px-6 py-2 rounded-full text-lg">Obter o Spotify Premium</button>
+    <section className="hero-section">
+      <div
+        className="hero-background"
+        style={{ backgroundImage: "url('/capa.png')" }}
+      >
+        <div className="hero-content">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={30}
+            navigation
+            loop={true}
+          >
+            <SwiperSlide>
+              <div>
+                <h1 className="hero-title">Música para todos</h1>
+                <div className="mt-4 space-x-4">
+                  <button className="hero-button">APROVEITE O SPOTIFY FREE</button>
+                  <button className="hero-button-bordered">OBTER O SPOTIFY PREMIUM</button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <h1 className="hero-title">As melhores rádios</h1>
+                <div className="mt-4 space-x-4">
+                  <button className="hero-button-bordered">♫OUÇA AGORA</button>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>
