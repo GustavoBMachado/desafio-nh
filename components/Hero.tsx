@@ -12,17 +12,15 @@ const Hero: React.FC = () => {
         className="hero-background"
         style={{ backgroundImage: "url('/capa.png')" }}
       >
-        <div className="hero-overlay"></div>
         <div className="hero-content">
           <Swiper
             modules={[Navigation]}
             spaceBetween={30}
             navigation
             loop={true}
-            className="swiper-container"
           >
             <SwiperSlide>
-              <div className="swiper-slide-content">
+              <div>
                 <h1 className="hero-title">Música para todos</h1>
                 <div className="mt-4 space-x-4">
                   <button className="hero-button">APROVEITE O SPOTIFY FREE</button>
@@ -31,7 +29,7 @@ const Hero: React.FC = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-slide-content">
+              <div>
                 <h1 className="hero-title">As melhores rádios</h1>
                 <div className="mt-4 space-x-4">
                   <button className="hero-button-bordered">♫OUÇA AGORA</button>
